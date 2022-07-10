@@ -1,0 +1,51 @@
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+}
+.header-class{
+    display: inline-block;
+    background: blue;
+    font-size: 22px;
+    color: aliceblue;
+    font-family: 'Arima', cursive;
+    width: 100%;
+    
+}
+
+.nav-class{
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 70px);
+}
+ul>li {
+    background: red;
+}
+
+li {
+    background: blue;
+    border: 3px solid #AAA;
+    width: 80px;
+    height: 80px;
+    margin: 0 5px;
+    float: right;
+    color: aliceblue;
+}
+
+li.colored {
+    background: greenyellow;
+}
+
+li.colored2 {
+    background: red;
+}
+
+li.colored3 {
+    background: pink;
+}
+input:invalid {
+border: 2px dashed red;
+}
+
+input:valid {
+border: 2px solid black;
+}
