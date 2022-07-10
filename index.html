@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minsait</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body style="background-color: #E1F4FA;">
+    <nav>
+        <div>
+            <a href="index.html" class="header-class">
+                Minsait
+            </a>
+        </div>
+        <nav style="height: 100px;">
+            <ul class="nav-class">
+                <li style="color: white;" id="mover">
+                    <a href="packages/index.html">Indra</a>
+                </li>
+                <li style="color: white;" id="mover2">
+                    <a href="customers/index.html">Clientes</a>
+                </li>
+                <li style="color: white;" id="mover3">
+                    <a href="start-hosting/index.html">Empleados</a>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+    <main>
+        <button id="run" style="background: rgb(12, 245, 43); border-radius: 25px 10px;">Color verde</button>
+        <button id="run2" style="background: red; border-radius: 10px 25px;">Color rojo</button>
+        <button id="run3" style="background: palevioletred; border-radius: 25px 10px;">Color </button>
+        <script>
+            $("#run").click(function () {
+                $("li:animated").toggleClass("colored");
+            });
+            function animatedIt() {
+                $("#mover").slideToggle("slow", animatedIt);
+            }
+            animatedIt();
+
+            $("#run2").click(function () {
+                $("li:animated").toggleClass("colored2");
+            });
+            function animated2It() {
+                $("#mover2").slideToggle("slow", animated2It);
+            }
+            animated2It();
+
+            $("#run3").click(function () {
+                $("li:animated").toggleClass("colored3");
+            });
+            function animated3It() {
+                $("#mover3").slideToggle("slow", animated3It);
+            }
+            animated3It();
+        </script>
+        <section>
+            <h1 style="color: blue; text-align: center;">Bienvenido a Minsait</h1>
+        </section>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Escriba su nombre"
+                        required>
+                    <label for="floatingInputGrid">Nombre:</label>
+                </div>
+                <label for="floatingInputGrid" style="color: red;" id="nombreObligatorio">Este campo es
+                    obligatorio</label>
+
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid2"
+                        placeholder="Escriba su apellido paterno" required>
+                    <label for="floatingInputGrid2">Apellido paterno:</label>
+                </div>
+                <label for="floatingInputGrid" style="color: red;" id="apellidoObligatorio">Este campo es
+                    obligatorio</label>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid3"
+                        placeholder="Escriba su apellido materno" required>
+                    <label for="floatingInputGrid3">Apellido materno:</label>
+                </div>
+                <label for="floatingInputGrid" style="color: red;" id="apellidoMObligatorio">Este campo es
+                    obligatorio</label>
+            </div>
+            <div class="input-group mb-3">
+                <label for="inputEmail4" class="form-label">Correo electrónico: </label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="email" class="form-control" placeholder="Ingrese su correo electrónico"
+                        aria-label="correo electrónico" aria-describedby="basic-addon1" required>
+                    <div class="invalid-feedback">
+                        Ingrese un correo
+                    </div>
+                </div>
+            </div>
+            <section>
+                <h6>Seleccione si ha tenido alguno de estos síntomas en los últimos 14 días </h6>
+                <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="inlineCheckbox1" value="Fiebre mayor a 39">
+                    <label class="btn btn-outline-primary" for="inlineCheckbox1">Fiebre mayor a 39°</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="inlineCheckbox2" value="Dolor de garganta">
+                    <label class="btn btn-outline-primary" for="inlineCheckbox2">Dolor de garganta</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="btn btn-outline-primary" for="inlineCheckbox3">Tos</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="btn-check" type="checkbox" id="inlineCheckbox4" value="option3">
+                    <label class="btn btn-outline-primary" for="inlineCheckbox4">Dificultad para respirar</label>
+                </div>
+            </section>
+            <select class="col-md-3" aria-label="Default select example" id="selectVacuna">
+                <option selected>Seleccione la vacuna que recibió</option>
+                <option value="Sinovac" id="Sinovac">Sinovac</option>
+                <option value="Sputnik">Sputnik</option>
+                <option value="Astrazeneca">Astrazeneca</option>
+                <option value="Pfizer">Pfizer</option>
+            </select>
+            <div class="mb-3">
+                <label for="formFile" class="form-label" id="labelCertificado">Agregue su certificado de
+                    vacunación</label>
+                <input class="form-control" type="file" id="formFile" accept="image/*" multiple
+                    onchange="processSelectedFiles(this)">
+            </div>
+            <div class="col-12" style="text-align: center ;">
+                <button type="submit" class="btn btn-primary" id="submit">Enviar</button>
+            </div>
+        </form>
+        <script>
+            $(document).ready(function () {
+                $("#submit").click(function () {
+                    alert("Tus respuestas han sido enviadas, gracias");
+                });
+
+                $('#inlineCheckbox1').on('change', function () {
+                    if (this.checked) {
+                        alert("Desafortunamente no puedes acudir a nuestras oficinas");
+                    }
+                });
+                $('#formFile').hide();
+                $("#labelCertificado").hide();
+                $('#selectVacuna').on('change', function () {
+                    switch ($('#selectVacuna').val()) {
+                        case "Seleccione la vacuna que recibió":
+                            $('#formFile').hide();
+                            $("#labelCertificado").hide();
+                            break;
+                        case "Sinovac":
+                            $('#formFile').show();
+                            $("#labelCertificado").show();
+                            break;
+                        case "Sputnik":
+                            $('#formFile').show();
+                            $("#labelCertificado").show();
+                            break;
+                        case "Astrazeneca":
+                            $('#formFile').show();
+                            $("#labelCertificado").show();
+                            break;
+                        case "Pfizer":
+                            $('#formFile').show();
+                            $("#labelCertificado").show();
+                            break;
+                        default:
+                            $('#formFile').hide();
+                            $("#labelCertificado").hide();
+                            break;
+                    }
+                });
+
+                $("#nombreObligatorio").hide();
+                $('#floatingInputGrid').on('change', function () {
+                    console.log("Prueba campo", $("#floatingInputGrid").val());
+                    if ($("#floatingInputGrid").val() == "") {
+                        $("#nombreObligatorio").show();
+                    } else {
+                        $("#nombreObligatorio").hide();
+                    }
+                });
+
+                $("#apellidoObligatorio").hide();
+                $('#floatingInputGrid2').on('change', function () {
+                    console.log("Prueba campo", $("#floatingInputGrid2").val());
+                    if ($("#floatingInputGrid2").val() == "") {
+                        $("#apellidoObligatorio").show();
+                    } else {
+                        $("#apellidoObligatorio").hide();
+                    }
+                });
+
+                $("#apellidoMObligatorio").hide();
+                $('#floatingInputGrid3').on('change', function () {
+                    console.log("Prueba campo", $("#floatingInputGrid3").val());
+                    if ($("#floatingInputGrid3").val() == "") {
+                        $("#apellidoMObligatorio").show();
+                    } else {
+                        $("#apellidoMObligatorio").hide();
+                    }
+                });
+
+
+
+            });
+
+            $(document).ready(function () {
+                $('#Sinovac').on('change', function () {
+                    if (this.selected == "Sinovac") {
+                        alert("Hola");
+                    }
+
+                })
+            });
+
+            function processSelectedFiles(fileInput) {
+                var files = fileInput.files;
+
+                for (var i = 0; i < files.length; i++) {
+                    alert("El nombre de su archivo es:  " + files[i].name);
+                }
+            }
+        </script>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
